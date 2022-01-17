@@ -1,7 +1,5 @@
 /* Normalisation de la page */
 @import url("normalize_css.css");
-/*# sourceMappingURL=omf-accueil.css.map */
-
 /* Police */
 @font-face {
   font-family: "shrikhand";
@@ -10,11 +8,9 @@
   font-weight: normal;
   font-style: normal;
 }
-
 /* Page global */
 #page {
   width: 271px;
-  border: black solid 1px;
 }
 
 h1, h2 {
@@ -35,4 +31,4 @@ header img {
   margin: 15px 0 7px 0;
 }
 
-
+/*# sourceMappingURL=omf-accueil.css.map */
