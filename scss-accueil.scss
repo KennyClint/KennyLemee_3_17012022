@@ -17,6 +17,8 @@
 /* Page global */
 #page {
 	width: 271px;
+	margin: 0 auto;
+	border: black solid 1px;
 }
 
 h1, h2 {
@@ -35,4 +37,24 @@ header {
 header img {
 	width: 118px;
 	margin: 15px 0 7px 0;
+}
+
+/* Localisation */
+.localisation {
+	height: 36px;
+	background: linear-gradient(#d0d0d0 0%, #eaeaea 10%, #eaeaea);
+}
+
+.loc-cont{
+	height: 36px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 0 0 0;
+	font-size: 13px;
+	font-weight: bold;
+	color: #353535;
+	&__ico{
+		padding-right: 10px;
+	}
 }
