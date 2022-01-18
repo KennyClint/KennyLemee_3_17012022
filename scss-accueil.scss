@@ -1,7 +1,6 @@
 /* Normalisation de la page */
 @import url("normalize_css.css");
 
-
 /* Police */
 @font-face {
     font-family: 'shrikhand';
@@ -14,19 +13,19 @@
     font-style: normal;
 }
 
+/* Variable */
+$foot-backgrd-color: #353535;
+
 /* Page global */
 #page {
 	width: 271px;
 	margin: 0 auto;
 	border: black solid 1px;
+	font-family: roboto, arial;
 }
 
 h1, h2 {
 	font-family: shrikhand, arial;
-}
-
-p {
-	font-family: roboto, arial;
 }
 
 /* Header */
@@ -45,7 +44,7 @@ header img {
 	background: linear-gradient(#d0d0d0 0%, #eaeaea 10%, #eaeaea);
 }
 
-.loc-cont{
+.loc-cont {
 	height: 36px;
 	display: flex;
 	align-items: center;
@@ -53,8 +52,43 @@ header img {
 	padding: 0 0 0 0;
 	font-size: 13px;
 	font-weight: bold;
-	color: #353535;
-	&__ico{
+	color: $foot-backgrd-color;
+	&__ico {
 		padding-right: 10px;
 	}
+}
+
+/* Réservation */
+#reservation {
+	height: 204px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	background-color: #f6f6f6;
+}
+
+.res-text {
+	margin: 0;
+	padding-top: 15px;
+	font-size: 14px;
+	color: $foot-backgrd-color;
+	&--bold {
+		margin: 0;
+		font-weight: bold;
+		font-size: 18px;
+		padding: 23px 42px 0 42px;
+	}
+}
+
+.res-btn {
+	width: 158px;
+	height: 36px;
+	margin: 19px 0 39px 0;
+	padding-top: 10px;
+	cursor: pointer;
+	border-radius: 20px;
+	font-size: 13px;
+	color: white;
+	background-image: linear-gradient(#FF79DA, #9356DC);
 }
