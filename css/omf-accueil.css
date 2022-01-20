@@ -1,6 +1,7 @@
 @charset "UTF-8";
-/* Normalisation de la page */
+/* Importation */
 @import url("normalize_css.css");
+@import url("omf-footer.css");
 /* Police */
 @font-face {
   font-family: "shrikhand";
@@ -14,6 +15,8 @@
 /* Page global */
 #page {
   font-family: roboto, arial;
+  display: flex;
+  flex-direction: column;
 }
 
 h1, h2 {
@@ -149,6 +152,7 @@ section {
   display: flex;
   flex-direction: column;
   background-color: #f6f6f6;
+  margin-bottom: 0;
 }
 
 .restau-list:last-child {

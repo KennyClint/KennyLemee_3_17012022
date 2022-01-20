@@ -1,16 +1,14 @@
-/* Normalisation de la page */
+/* Importation */
 @import url("normalize_css.css");
+@import url("omf-footer.css");
 
 /* Police */
 @font-face {
-	font-family: 'shrikhand';
-	src: url('../police/shrikhand-regular-webfont.eot');
-	src: url('../police/shrikhand-regular-webfont.eot?#iefix') format('embedded-opentype'),
-	url('../police/shrikhand-regular-webfont.woff') format('woff'),
-	url('../police/shrikhand-regular-webfont.ttf') format('truetype'),
-	url('../police/shrikhand-regular-webfont.svg#shrikhandregular') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-family: "shrikhand";
+  src: url("../police/shrikhand-regular-webfont.eot");
+  src: url("../police/shrikhand-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../police/shrikhand-regular-webfont.woff") format("woff"), url("../police/shrikhand-regular-webfont.ttf") format("truetype"), url("../police/shrikhand-regular-webfont.svg#shrikhandregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* Variable */
@@ -63,6 +61,8 @@ $color-aside-txt: #f6f6f6;
 /* Page global */
 #page {
 	font-family: roboto, arial;
+	display: flex;
+	flex-direction: column;
 }
 
 h1, h2 {
@@ -174,6 +174,7 @@ section {
 	display: flex;
 	flex-direction: column;
 	background-color: #f6f6f6;
+	margin-bottom: 0;
 }
 
 
@@ -233,4 +234,3 @@ section {
 .fa-heart {
 	font-size: 1.4em;
 }
-
