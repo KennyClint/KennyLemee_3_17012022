@@ -4,8 +4,8 @@
 /* Police */
 @font-face {
   font-family: "shrikhand";
-  src: url("police/shrikhand-regular-webfont.eot");
-  src: url("police/shrikhand-regular-webfont.eot?#iefix") format("embedded-opentype"), url("police/shrikhand-regular-webfont.woff") format("woff"), url("police/shrikhand-regular-webfont.ttf") format("truetype"), url("police/shrikhand-regular-webfont.svg#shrikhandregular") format("svg");
+  src: url("../police/shrikhand-regular-webfont.eot");
+  src: url("../police/shrikhand-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../police/shrikhand-regular-webfont.woff") format("woff"), url("../police/shrikhand-regular-webfont.ttf") format("truetype"), url("../police/shrikhand-regular-webfont.svg#shrikhandregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -88,7 +88,7 @@ aside {
   margin-bottom: 4.2em;
 }
 
-.titre-fonct {
+.bloc_titre {
   margin-top: 1.8em;
   font-weight: bold;
   font-size: 1.6em;
