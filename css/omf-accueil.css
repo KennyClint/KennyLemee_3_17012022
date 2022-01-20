@@ -142,4 +142,68 @@ aside {
   color: #9356DC;
 }
 
+/* Restaurants */
+section {
+  padding-left: 1.1em;
+  padding-right: 1.1em;
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+}
+
+.restau-list:last-child {
+  margin-bottom: 3em;
+}
+.restau-list-card {
+  box-shadow: 0 0.4em 0.4em #e6e6e6;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  border-radius: 1em;
+  margin-bottom: 1.1em;
+}
+.restau-list-card img {
+  width: 100%;
+  height: 11em;
+  object-fit: cover;
+  border-radius: 1em 1em 0 0;
+  margin-bottom: 0;
+}
+.restau-list-card-txt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8em 1.6em 0.9em 0.8em;
+  background-color: white;
+  font-size: 1.1em;
+  border-radius: 0 0 1em 1em;
+  margin-top: 0;
+}
+.restau-list-card-txt__left {
+  flex-direction: column;
+}
+.restau-list-card-txt__left p {
+  margin: 0;
+}
+.restau-list-card-txt__left-titre {
+  font-weight: bold;
+  padding-bottom: 0.4em;
+}
+
+.nota-nouveau {
+  position: absolute;
+  top: 0.9em;
+  right: 0.9em;
+  padding: 0.4em 0.9em 0.4em 0.9em;
+  font-size: 0.9em;
+  color: #008766;
+  background-color: #99e2d0;
+  border-radius: 0.2em;
+}
+
+.fa-heart {
+  font-size: 1.4em;
+}
+
 /*# sourceMappingURL=omf-accueil.css.map */
