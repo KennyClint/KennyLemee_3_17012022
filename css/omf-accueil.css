@@ -1,0 +1,145 @@
+@charset "UTF-8";
+/* Normalisation de la page */
+@import url("normalize_css.css");
+/* Police */
+@font-face {
+  font-family: "shrikhand";
+  src: url("police/shrikhand-regular-webfont.eot");
+  src: url("police/shrikhand-regular-webfont.eot?#iefix") format("embedded-opentype"), url("police/shrikhand-regular-webfont.woff") format("woff"), url("police/shrikhand-regular-webfont.ttf") format("truetype"), url("police/shrikhand-regular-webfont.svg#shrikhandregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Variable */
+/* Mixin */
+/* Page global */
+#page {
+  font-family: roboto, arial;
+}
+
+h1, h2 {
+  font-family: shrikhand, arial;
+}
+
+/* Header */
+header {
+  text-align: center;
+}
+
+header img {
+  width: 10em;
+  margin: 1.5em 0 0.5em 0;
+}
+
+/* Localisation */
+.localisation {
+  background: linear-gradient(#d0d0d0 0%, #eaeaea 10%, #eaeaea);
+}
+
+.loc-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 1em;
+  font-weight: bold;
+  color: #353535;
+}
+.loc-cont__ico {
+  padding-right: 1em;
+}
+
+/* Réservation */
+#reservation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #f6f6f6;
+}
+
+.res-text {
+  margin: 0.7em 2em 0 2em;
+  padding-top: 0;
+  font-size: 1.2em;
+  color: #353535;
+}
+.res-text--bold {
+  margin: 1.5em 2em 0 2em;
+  font-weight: bold;
+  font-size: 1.6em;
+  padding: 0;
+}
+
+.res-btn {
+  margin: 1.8em 0 3.5em 0;
+  padding: 1em 1.4em;
+  cursor: pointer;
+  border-radius: 2.1em;
+  font-size: 1em;
+  color: white;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 0 0.4em 0.4em #e6e6e6;
+}
+
+/* Fonctionnement */
+aside {
+  padding-left: 1.1em;
+  padding-right: 1.1em;
+  margin-bottom: 4.2em;
+}
+
+.titre-fonct {
+  margin-top: 1.8em;
+  font-weight: bold;
+  font-size: 1.6em;
+  padding: 0;
+}
+
+.aside-card {
+  position: relative;
+  margin-top: 0;
+}
+.aside-card__bub {
+  border-radius: 2em;
+  background-color: #9356DC;
+  position: absolute;
+  top: 1.5em;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+}
+.aside-card__bub-num {
+  color: white;
+  font-size: 0.9em;
+}
+.aside-card__text {
+  margin-top: 1.5em;
+  margin-left: 0.9em;
+  padding: 0.7em 2em 0.7em 2em;
+  display: flex;
+  align-items: center;
+  background-color: #f6f6f6;
+  border-radius: 1em;
+  font-size: 1em;
+  box-shadow: 0 0.4em 0.4em #e6e6e6;
+}
+.aside-card__text i {
+  margin-right: 1.3em;
+  font-size: 1.1em;
+  color: #7E7E7E;
+}
+.aside-card__text-alt {
+  margin-top: 1.5em;
+  margin-left: 0.9em;
+  padding: 0.7em 2em 0.7em 2em;
+  display: flex;
+  align-items: center;
+  background-color: #f5edff;
+  border-radius: 1em;
+  font-size: 1em;
+}
+.aside-card__text-alt i {
+  margin-right: 1.3em;
+  font-size: 1.1em;
+  color: #9356DC;
+}
+
+/*# sourceMappingURL=omf-accueil.css.map */
