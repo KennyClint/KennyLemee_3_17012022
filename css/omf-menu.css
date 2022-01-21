@@ -1,0 +1,42 @@
+/* Importation */
+@import url("normalize_css.css");
+@import url("omf-footer.css");
+/* Police */
+@font-face {
+  font-family: "shrikhand";
+  src: url("../police/shrikhand-regular-webfont.eot");
+  src: url("../police/shrikhand-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../police/shrikhand-regular-webfont.woff") format("woff"), url("../police/shrikhand-regular-webfont.ttf") format("truetype"), url("../police/shrikhand-regular-webfont.svg#shrikhandregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Variable */
+/* Mixin */
+/* Page global */
+#page {
+  font-family: roboto, arial;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: shrikhand, arial;
+}
+
+/* Header */
+header {
+  position: relative;
+  text-align: center;
+}
+header .fas {
+  position: absolute;
+  top: 1.3em;
+  left: 1.15em;
+  color: #353535;
+  font-size: 1.2em;
+}
+header img {
+  width: 10em;
+  margin: 1.5em 0 0.5em 0;
+}
+
+/*# sourceMappingURL=omf-menu.css.map */

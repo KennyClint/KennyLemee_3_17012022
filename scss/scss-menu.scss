@@ -1,0 +1,86 @@
+/* Importation */
+@import url("normalize_css.css");
+@import url("omf-footer.css");
+
+/* Police */
+@font-face {
+  font-family: "shrikhand";
+  src: url("../police/shrikhand-regular-webfont.eot");
+  src: url("../police/shrikhand-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../police/shrikhand-regular-webfont.woff") format("woff"), url("../police/shrikhand-regular-webfont.ttf") format("truetype"), url("../police/shrikhand-regular-webfont.svg#shrikhandregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Variable */
+$color-primary: #9356DC;
+$color-secondary: #FF79DA; 
+$color-tertiary: #99E2D0;
+$color-footer: #353535;
+
+/* Mixin */
+@mixin skeleton_bloc {
+	padding-left: 1.1em;
+	padding-right: 1.1em;
+}
+
+@mixin bloc-shadows {
+	box-shadow: 0 0.4em 0.4em #e6e6e6;
+}
+
+@mixin titre_bloc {
+	margin-top: 1.8em;
+	font-weight: bold;
+	font-size: 1.6em;
+	padding: 0;
+}
+
+@mixin aside_num_card {
+	border-radius: 2em;
+	background-color: $color-primary;
+}
+
+@mixin aside_card_ico ($color-i: $color-aside-ico) {
+	margin-right: 1.3em;
+	font-size: 1.1em;
+	color: $color-i;
+}
+
+@mixin aside_card_text ($color-back: $color-aside-txt) {
+	margin-top: 1.5em;
+	margin-left: 0.9em;
+	padding: 0.7em 2em 0.7em 2em; 
+	display: flex;
+	align-items: center;
+	background-color: $color-back;
+	border-radius: 1em;
+	font-size: 1em; 
+}
+
+/* Page global */
+#page {
+	font-family: roboto, arial;
+	display: flex;
+	flex-direction: column;
+}
+
+h1 {
+	font-family: shrikhand, arial;
+}
+
+/* Header */
+header {
+	position: relative;
+	text-align: center;
+	& .fas {
+		position: absolute;
+		top: 1.3em;
+		left: 1.15em;
+		color: $color-footer;
+		font-size: 1.2em;
+	}
+	& img {
+		width: 10em;
+		margin: 1.5em 0 0.5em 0;
+	}
+}
+
