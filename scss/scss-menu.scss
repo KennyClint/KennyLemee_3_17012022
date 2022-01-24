@@ -16,11 +16,12 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA; 
 $color-tertiary: #99E2D0;
 $color-footer: #353535;
+$color-menu: #F6F6F6;
 
 /* Mixin */
 @mixin skeleton_bloc {
-	padding-left: 1.1em;
-	padding-right: 1.1em;
+	padding-left: 0.8em;
+	padding-right: 0.8em;
 }
 
 @mixin bloc-shadows {
@@ -59,12 +60,16 @@ $color-footer: #353535;
 /* Page global */
 #page {
 	font-family: roboto, arial;
-	display: flex;
-	flex-direction: column;
 }
 
 h1 {
 	font-family: shrikhand, arial;
+	font-weight: normal;
+	font-size: 1.7em;
+}
+
+.heading, .body_heading {
+	margin-left: 0.5em;
 }
 
 /* Header */
@@ -84,3 +89,98 @@ header {
 	}
 }
 
+/* Article */
+.menu img {
+	width: 100%;
+	height: 16.5em;
+	object-fit: cover;
+}
+
+.menu__body {
+	position: relative;
+	top: -3em;
+	margin-bottom: -3em;
+	padding-bottom: 4.5em;
+	@include skeleton_bloc;
+	border-radius: 2.5em 2.5em 0 0;
+	background-color: $color-menu;
+}
+
+.heading {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	margin: 0;
+	padding: 1em 0.5em;
+	& .fa-heart {
+		font-size: 1.6em;
+		padding-right: 0.9em;
+	}
+}
+
+.body {
+	& h2 {
+		font-size: 1em;
+		font-weight: normal;
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+}
+
+.h2_trait {
+	content: "";
+	width: 2.3em;
+	height: 0.2em;
+	background-color: $color-tertiary;
+	margin: 0.5em 0 1em 0;
+}
+
+.body_grp {
+	padding-bottom: 2em;
+	& a {
+		text-decoration: none;
+		color: black;
+	}
+	&-plat {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		padding: 0.6em 1.3em 0.7em 0.7em;
+		margin-bottom: 1em;
+		background-color: white;
+		border-radius: 1em;
+		cursor: pointer;
+		@include bloc-shadows;
+		&__txt {
+			&-titre {
+				font-weight: bold;
+				font-size: 1.1em;
+				padding-bottom: 0.3em;
+			}
+		}
+		& p {
+			margin: 0;
+		}
+	}
+}
+
+.plat-price {
+	font-weight: bold;
+	color: $color-footer;
+}
+
+.comm {
+	display: flex;
+	justify-content: center;
+	&__btn {
+		text-align: center;
+		padding: 1em 3.3em;
+		cursor: pointer;
+		border-radius: 2.1em;
+		font-size: 1em;
+		color: white;
+		background-image: linear-gradient($color-secondary, $color-primary);
+		@include bloc-shadows;
+	}
+}
