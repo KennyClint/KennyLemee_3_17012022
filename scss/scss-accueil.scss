@@ -18,6 +18,7 @@ $color-tertiary: #99E2D0;
 $color-footer: #353535;
 $color-aside-ico: #7E7E7E;
 $color-aside-txt: #f6f6f6;
+$color-shadow: #e6e6e6;
 
 /* Mixin */
 @mixin skeleton_bloc {
@@ -26,7 +27,7 @@ $color-aside-txt: #f6f6f6;
 }
 
 @mixin bloc-shadows {
-	box-shadow: 0 0.4em 0.4em #e6e6e6;
+	box-shadow: 0 0.4em 0.4em $color-shadow;
 }
 
 @mixin titre_bloc {
@@ -128,6 +129,31 @@ header img {
 	color: white;
 	background-image: linear-gradient($color-secondary, $color-primary);
 	@include bloc-shadows;
+	position: relative;
+	z-index: 2;
+	&:hover {
+		&::before {
+			opacity: 1;
+		}
+	}
+	&::before {
+		content: "Explorer nos restaurants";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: inherit;
+		cursor: inherit;
+		border-radius: inherit;
+		font-size: inherit;
+		color: inherit;
+		background-image: linear-gradient(lighten($color-secondary, 5), lighten($color-primary, 5));
+		box-shadow: 0 0.4em 0.4em darken($color-shadow, 15);
+		opacity: 0;
+		z-index: 1;
+		transition: opacity 200ms;
+	}
 }
 
 /* Fonctionnement */

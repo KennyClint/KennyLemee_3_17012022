@@ -17,6 +17,7 @@ $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-footer: #353535;
 $color-menu: #F6F6F6;
+$color-shadow: #e6e6e6;
 $color-btn__bg: linear-gradient($color-secondary, $color-primary); 
 
 /* Mixin */
@@ -26,7 +27,7 @@ $color-btn__bg: linear-gradient($color-secondary, $color-primary);
 }
 
 @mixin bloc-shadows {
-	box-shadow: 0 0.4em 0.4em #e6e6e6;
+	box-shadow: 0 0.4em 0.4em $color-shadow;
 }
 
 /* Page global */
@@ -157,20 +158,33 @@ header {
 		position: relative;
 		z-index: 2;
 		&:hover {
-			&::after {
+			&::before {
 				opacity: 1;
 			}
 		}
-		&::after {
-			content: "";
+		&::before {
+			content: "Commander";
 			position: absolute;
 			top: 0;
 			bottom: 0;
 			right: 0;
 			left: 0;
-
+			text-align: inherit;
+			padding: inherit;
+			cursor: inherit;
+			border-radius: inherit;
+			font-size: inherit;
+			color: inherit;
+			background-image: linear-gradient(lighten($color-secondary, 5), lighten($color-primary, 5));
+			box-shadow: 0 0.4em 0.4em darken($color-shadow, 15);
 			opacity: 0;
 			z-index: 1;
+			transition: opacity 200ms;
 		}
 	}
 }
+
+/*
+linear-gradient($color-secondary, $color-primary)
+lighten($color-btn__bg, 10)
+*/
