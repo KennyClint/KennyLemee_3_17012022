@@ -134,6 +134,21 @@ header img {
   color: white;
   background-image: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 0 0.4em 0.4em #e6e6e6;
+  position: relative;
+  z-index: 2;
+}
+.comm__btn:hover::after {
+  opacity: 1;
+}
+.comm__btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
 }
 
 /*# sourceMappingURL=omf-menu.css.map */

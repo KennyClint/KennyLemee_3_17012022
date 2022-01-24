@@ -17,6 +17,7 @@ $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-footer: #353535;
 $color-menu: #F6F6F6;
+$color-btn__bg: linear-gradient($color-secondary, $color-primary); 
 
 /* Mixin */
 @mixin skeleton_bloc {
@@ -26,35 +27,6 @@ $color-menu: #F6F6F6;
 
 @mixin bloc-shadows {
 	box-shadow: 0 0.4em 0.4em #e6e6e6;
-}
-
-@mixin titre_bloc {
-	margin-top: 1.8em;
-	font-weight: bold;
-	font-size: 1.6em;
-	padding: 0;
-}
-
-@mixin aside_num_card {
-	border-radius: 2em;
-	background-color: $color-primary;
-}
-
-@mixin aside_card_ico ($color-i: $color-aside-ico) {
-	margin-right: 1.3em;
-	font-size: 1.1em;
-	color: $color-i;
-}
-
-@mixin aside_card_text ($color-back: $color-aside-txt) {
-	margin-top: 1.5em;
-	margin-left: 0.9em;
-	padding: 0.7em 2em 0.7em 2em; 
-	display: flex;
-	align-items: center;
-	background-color: $color-back;
-	border-radius: 1em;
-	font-size: 1em; 
 }
 
 /* Page global */
@@ -180,7 +152,25 @@ header {
 		border-radius: 2.1em;
 		font-size: 1em;
 		color: white;
-		background-image: linear-gradient($color-secondary, $color-primary);
+		background-image: $color-btn__bg;
 		@include bloc-shadows;
+		position: relative;
+		z-index: 2;
+		&:hover {
+			&::after {
+				opacity: 1;
+			}
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+
+			opacity: 0;
+			z-index: 1;
+		}
 	}
 }
