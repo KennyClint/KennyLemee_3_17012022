@@ -158,12 +158,15 @@ section {
 .restau-list:last-child {
   margin-bottom: 3em;
 }
+.restau-list a {
+  text-decoration: none;
+  color: black;
+}
 .restau-list-card {
   box-shadow: 0 0.4em 0.4em #e6e6e6;
   position: relative;
   display: flex;
   flex-direction: column;
-  cursor: pointer;
   border-radius: 1em;
   margin-bottom: 1.1em;
 }
