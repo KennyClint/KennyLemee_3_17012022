@@ -68,9 +68,34 @@ header img {
   margin: 0;
   padding: 1em 0.5em;
 }
-.heading .fa-heart {
+
+.heart {
+  margin-right: 1em;
+  position: relative;
+}
+.heart .far {
+  opacity: 1;
   font-size: 1.6em;
-  padding-right: 0.9em;
+  transition: 1s;
+}
+.heart .fas {
+  opacity: 0;
+  font-size: 1.6em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: 1s;
+}
+.heart:hover .far {
+  opacity: 0;
+}
+.heart:hover .fas {
+  opacity: 1;
 }
 
 .body h2 {
@@ -104,10 +129,10 @@ header img {
   box-shadow: 0 0.4em 0.4em #e6e6e6;
   overflow: hidden;
 }
-.card:active .coche {
+.card:hover .coche {
   margin-right: 0;
 }
-.card:active .coche .fas {
+.card:hover .coche .fas {
   transform: rotate(0deg);
 }
 .card-txt {
