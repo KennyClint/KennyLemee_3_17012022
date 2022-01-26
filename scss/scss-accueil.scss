@@ -260,6 +260,32 @@ section {
 	border-radius: 0.2em;
 }
 
-.fa-heart {
-	font-size: 1.4em;
+.heart {
+	position: relative;
+	& .far {
+		opacity: 1;
+		font-size: 1.4em;
+		transition: 1s;
+	}
+	& .fas {
+		opacity: 0;
+		font-size: 1.4em;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: -webkit-linear-gradient($color-primary, $color-secondary);
+  	-webkit-background-clip: text;
+  	color: transparent;
+  	transition: 1s;
+	}
+	&:hover {
+		& .far {
+			opacity: 0;
+		}
+		& .fas {
+			opacity: 1;
+		}
+	}
 }
