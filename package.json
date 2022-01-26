@@ -1,0 +1,13 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass_acc": "sass --watch scss/scss-accueil.scss:css/omf-accueil.css",
+    "sass_foot": "sass --watch scss/scss-footer.scss:css/omf-footer.css",
+    "sass_menu": "sass --watch scss/scss-menu.scss:css/omf-menu.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
