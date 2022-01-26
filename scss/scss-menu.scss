@@ -111,36 +111,77 @@ header {
 
 .body_grp {
 	padding-bottom: 2em;
-	& a {
-		text-decoration: none;
-		color: black;
-	}
-	&-plat {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-end;
-		padding: 0.6em 1.3em 0.7em 0.7em;
-		margin-bottom: 1em;
-		background-color: white;
-		border-radius: 1em;
-		cursor: pointer;
-		@include bloc-shadows;
-		&__txt {
-			&-titre {
-				font-weight: bold;
-				font-size: 1.1em;
-				padding-bottom: 0.3em;
+}
+
+.card {
+	height: 4.1em;
+	display: flex;
+	align-items: flex-end;
+	background-color: white;
+	margin-bottom: 1em;
+	border-radius: 1em;
+	cursor: pointer;
+	@include bloc-shadows;
+	overflow: hidden;
+	&:active {
+		& .coche {
+			margin-right: 0;
+			& .fas {
+				transform: rotate(0deg);
 			}
+		}
+	}
+	&-txt {
+		padding: 0.8em 0 0.8em 0.7em;
+		white-space: nowrap;
+		overflow: hidden;
+		&__titre {
+			font-weight: bold;
+			font-size: 1.1em;
+			padding-bottom: 0.3em;
 		}
 		& p {
 			margin: 0;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
 		}
+	}
+	&-price {
+		margin-left: auto;
+		font-weight: bold;
+		color: $color-footer;
+		margin-bottom: 0.8em;
+		padding-right: 1.2em;
+		padding-left: 1.2em;
+		
 	}
 }
 
 .plat-price {
 	font-weight: bold;
 	color: $color-footer;
+	margin: 0;
+}
+
+.coche {
+	width: 3.7em;
+	height: 100%;
+	display: flex;
+	flex-shrink: 0;
+	border-radius: 0 1em 1em 0;
+	background-color: #95e8ca; 
+	align-self: center;
+	margin-right: -3.7em;
+	transition: 350ms;
+	& .fas {
+		font-size: 1.4em;
+		margin: auto;
+		color: white;
+		background-color: #95e8ca;
+		transform: rotate(-180deg);
+		transition: 350ms 100ms;
+	}
 }
 
 .comm {
@@ -183,8 +224,3 @@ header {
 		}
 	}
 }
-
-/*
-linear-gradient($color-secondary, $color-primary)
-lighten($color-btn__bg, 10)
-*/

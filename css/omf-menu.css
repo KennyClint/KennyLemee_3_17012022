@@ -92,33 +92,73 @@ header img {
 .body_grp {
   padding-bottom: 2em;
 }
-.body_grp a {
-  text-decoration: none;
-  color: black;
-}
-.body_grp-plat {
+
+.card {
+  height: 4.1em;
   display: flex;
-  justify-content: space-between;
   align-items: flex-end;
-  padding: 0.6em 1.3em 0.7em 0.7em;
-  margin-bottom: 1em;
   background-color: white;
+  margin-bottom: 1em;
   border-radius: 1em;
   cursor: pointer;
   box-shadow: 0 0.4em 0.4em #e6e6e6;
+  overflow: hidden;
 }
-.body_grp-plat__txt-titre {
+.card:active .coche {
+  margin-right: 0;
+}
+.card:active .coche .fas {
+  transform: rotate(0deg);
+}
+.card-txt {
+  padding: 0.8em 0 0.8em 0.7em;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.card-txt__titre {
   font-weight: bold;
   font-size: 1.1em;
   padding-bottom: 0.3em;
 }
-.body_grp-plat p {
+.card-txt p {
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-price {
+  margin-left: auto;
+  font-weight: bold;
+  color: #353535;
+  margin-bottom: 0.8em;
+  padding-right: 1.2em;
+  padding-left: 1.2em;
 }
 
 .plat-price {
   font-weight: bold;
   color: #353535;
+  margin: 0;
+}
+
+.coche {
+  width: 3.7em;
+  height: 100%;
+  display: flex;
+  flex-shrink: 0;
+  border-radius: 0 1em 1em 0;
+  background-color: #95e8ca;
+  align-self: center;
+  margin-right: -3.7em;
+  transition: 350ms;
+}
+.coche .fas {
+  font-size: 1.4em;
+  margin: auto;
+  color: white;
+  background-color: #95e8ca;
+  transform: rotate(-180deg);
+  transition: 350ms 100ms;
 }
 
 .comm {
@@ -159,10 +199,5 @@ header img {
   z-index: 1;
   transition: opacity 200ms;
 }
-
-/*
-linear-gradient($color-secondary, $color-primary)
-lighten($color-btn__bg, 10)
-*/
 
 /*# sourceMappingURL=omf-menu.css.map */
