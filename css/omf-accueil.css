@@ -232,8 +232,32 @@ section {
   border-radius: 0.2em;
 }
 
-.fa-heart {
+.heart {
+  position: relative;
+}
+.heart .far {
+  opacity: 1;
   font-size: 1.4em;
+  transition: 1s;
+}
+.heart .fas {
+  opacity: 0;
+  font-size: 1.4em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: 1s;
+}
+.heart:hover .far {
+  opacity: 0;
+}
+.heart:hover .fas {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=omf-accueil.css.map */
