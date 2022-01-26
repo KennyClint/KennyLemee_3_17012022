@@ -19,6 +19,7 @@ $color-footer: #353535;
 $color-menu: #F6F6F6;
 $color-shadow: #e6e6e6;
 $color-btn__bg: linear-gradient($color-secondary, $color-primary); 
+$color-heart: linear-gradient($color-primary, $color-secondary);
 
 /* Mixin */
 @mixin skeleton_bloc {
@@ -85,9 +86,36 @@ header {
 	align-items: baseline;
 	margin: 0;
 	padding: 1em 0.5em;
-	& .fa-heart {
+}
+
+.heart {
+	margin-right: 1em;
+	position: relative;
+	& .far {
+		opacity: 1;
 		font-size: 1.6em;
-		padding-right: 0.9em;
+		transition: 1s;
+	}
+	& .fas {
+		opacity: 0;
+		font-size: 1.6em;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: -webkit-linear-gradient($color-primary, $color-secondary);
+  	-webkit-background-clip: text;
+  	color: transparent;
+  	transition: 1s;
+	}
+	&:hover {
+		& .far {
+			opacity: 0;
+		}
+		& .fas {
+			opacity: 1;
+		}
 	}
 }
 
@@ -123,7 +151,7 @@ header {
 	cursor: pointer;
 	@include bloc-shadows;
 	overflow: hidden;
-	&:active {
+	&:hover {
 		& .coche {
 			margin-right: 0;
 			& .fas {
