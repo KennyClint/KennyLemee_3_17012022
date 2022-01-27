@@ -141,6 +141,49 @@ header {
 	padding-bottom: 2em;
 }
 
+@keyframes titre {
+	0% {
+		transform: translatex(-5em);
+		opacity: 0;
+	}
+	40% {
+		opacity: 0;
+	}
+	100% {
+		transform: translatex(0);
+		opacity: 1;
+	}
+}
+
+@keyframes card {
+	0% {
+		transform: translatey(-5em);
+		opacity: 0;
+	}
+	40% {
+		opacity: 0;
+	}
+	100% {
+		transform: translatey(0);
+		opacity: 1;
+	}
+}
+
+$num-grp: 3;
+$num-card: 9;
+$anim-delay: 80ms;
+
+.body_heading {
+	overflow: hidden;
+	opacity: 0;
+	animation: titre 600ms ease both;
+	@for $i from 1 through $num-grp {
+		&-#{$i} {
+			animation-delay: $anim-delay * $i;
+		}
+	}
+}
+
 .card {
 	height: 4.1em;
 	display: flex;
@@ -151,6 +194,13 @@ header {
 	cursor: pointer;
 	@include bloc-shadows;
 	overflow: hidden;
+	opacity: 0;
+	animation: card 600ms ease both;
+	@for $i from 1 through $num-card {
+		&-#{$i} {
+			animation-delay: $anim-delay * $i;
+		}
+	}
 	&:hover {
 		& .coche {
 			margin-right: 0;
@@ -212,6 +262,11 @@ header {
 	}
 }
 
+/* Animation - Plat*/
+
+
+
+/* Bouton - Commander */
 .comm {
 	display: flex;
 	justify-content: center;
