@@ -62,13 +62,99 @@ $color-shadow: #e6e6e6;
 /* Page global */
 #page {
 	font-family: roboto, arial;
-	display: flex;
-	flex-direction: column;
 }
 
 h1, h2 {
 	font-family: shrikhand, arial;
 }
+
+/* Chargement Animation */
+@keyframes sphere {
+	0% {
+		transform: translatey(0);
+	}
+	35% {
+		transform: translatey(-3em);
+	}
+	70% {
+		transform: translatey(0);
+	}
+}
+
+@keyframes logo {
+	0% {
+		opacity: 0;
+		transform: scale(1.2);
+	}
+	10% {
+		opacity: 1;		
+	}
+	80% {
+		opacity: 1;
+	}
+	100% {
+		transform: scale(4);
+	}
+}
+
+@keyframes end {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		z-index: -10;
+	}
+}
+
+.loader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	background-color: $color-aside-txt;
+	animation: end 50ms 2800ms both;
+	&-grp {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 2em;
+		animation: end 250ms 1100ms both;
+	}
+	&-sphere {
+		width: 3em;
+		height: 3em;
+		border-radius: 2em;
+		opacity: 1;
+		animation: sphere 800ms 2 ease-in-out;
+		&__1 {
+			background-color: $color-primary;
+		}
+		&__2 {
+			background-color: $color-secondary;
+			animation-delay: 100ms;
+		}
+		&__3 {
+			background-color: $color-tertiary;
+			animation-delay: 200ms;
+		}
+	}
+	&-logo {
+		opacity: 0;
+		position: absolute;
+		font-family: shrikhand, arial;
+		animation: logo 1900ms 1100ms ease-in-out;
+	}
+}
+
+
 
 /* Header */
 header {
