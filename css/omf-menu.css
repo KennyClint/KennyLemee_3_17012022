@@ -118,6 +118,47 @@ header img {
   padding-bottom: 2em;
 }
 
+@keyframes titre {
+  0% {
+    transform: translatex(-5em);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    transform: translatex(0);
+    opacity: 1;
+  }
+}
+@keyframes card {
+  0% {
+    transform: translatey(-5em);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    transform: translatey(0);
+    opacity: 1;
+  }
+}
+.body_heading {
+  overflow: hidden;
+  opacity: 0;
+  animation: titre 600ms ease both;
+}
+.body_heading-1 {
+  animation-delay: 80ms;
+}
+.body_heading-2 {
+  animation-delay: 160ms;
+}
+.body_heading-3 {
+  animation-delay: 240ms;
+}
+
 .card {
   height: 4.1em;
   display: flex;
@@ -128,6 +169,35 @@ header img {
   cursor: pointer;
   box-shadow: 0 0.4em 0.4em #e6e6e6;
   overflow: hidden;
+  opacity: 0;
+  animation: card 600ms ease both;
+}
+.card-1 {
+  animation-delay: 80ms;
+}
+.card-2 {
+  animation-delay: 160ms;
+}
+.card-3 {
+  animation-delay: 240ms;
+}
+.card-4 {
+  animation-delay: 320ms;
+}
+.card-5 {
+  animation-delay: 400ms;
+}
+.card-6 {
+  animation-delay: 480ms;
+}
+.card-7 {
+  animation-delay: 560ms;
+}
+.card-8 {
+  animation-delay: 640ms;
+}
+.card-9 {
+  animation-delay: 720ms;
 }
 .card:hover .coche {
   margin-right: 0;
@@ -186,6 +256,8 @@ header img {
   transition: 350ms 100ms;
 }
 
+/* Animation - Plat*/
+/* Bouton - Commander */
 .comm {
   display: flex;
   justify-content: center;
