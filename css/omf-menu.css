@@ -256,7 +256,7 @@ header img {
   transition: 350ms 100ms;
 }
 
-@media all and (max-device-width: 991px) and (min-device-width: 760px) {
+@media all and (max-width: 991px) and (min-width: 760px) {
   .menu__body {
     padding-left: 3em;
     padding-right: 3em;
@@ -275,7 +275,7 @@ header img {
     width: 48.5%;
   }
 }
-@media all and (min-device-width: 992px) {
+@media all and (min-width: 992px) {
   .menu__body-int {
     display: flex;
     flex-direction: column;

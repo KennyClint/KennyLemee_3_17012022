@@ -249,7 +249,7 @@ aside {
   color: #9356DC;
 }
 
-@media all and (max-device-width: 991px) and (min-device-width: 760px) {
+@media all and (max-width: 991px) and (min-width: 760px) {
   aside {
     display: flex;
     flex-direction: column;
@@ -264,7 +264,7 @@ aside {
     justify-content: center;
   }
 }
-@media all and (min-device-width: 992px) {
+@media all and (min-width: 992px) {
   aside {
     display: flex;
     flex-direction: column;
@@ -381,7 +381,7 @@ section {
   opacity: 1;
 }
 
-@media all and (max-device-width: 991px) and (min-device-width: 760px) {
+@media all and (max-width: 991px) and (min-width: 760px) {
   section {
     padding-left: 3em;
     padding-right: 3em;
@@ -404,7 +404,7 @@ section {
     margin-bottom: 0;
   }
 }
-@media all and (min-device-width: 991px) {
+@media all and (min-width: 992px) {
   section {
     display: flex;
     flex-direction: column;

@@ -47,13 +47,13 @@ footer .foot ul li a i {
   width: 2em;
 }
 
-@media all and (max-device-width: 991px) and (min-device-width: 760px) {
+@media all and (max-width: 991px) and (min-width: 760px) {
   footer {
     padding-left: 3em;
     padding-right: 3em;
   }
 }
-@media all and (min-device-width: 991px) {
+@media all and (min-width: 992px) {
   footer {
     display: flex;
     justify-content: center;
