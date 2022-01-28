@@ -286,7 +286,6 @@ header img {
 
   .body_grp {
     display: flex;
-    justify-content: baseline;
     flex-wrap: wrap;
     margin-bottom: 3em;
     gap: 3em;
