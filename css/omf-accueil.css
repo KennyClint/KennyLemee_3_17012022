@@ -249,6 +249,46 @@ aside {
   color: #9356DC;
 }
 
+@media all and (max-device-width: 991px) and (min-device-width: 760px) {
+  aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aside-card {
+    width: 20em;
+  }
+  .aside-card__text {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media all and (min-device-width: 992px) {
+  aside {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 54em;
+  }
+
+  .aside-grp {
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+    width: 54em;
+  }
+  .aside-card {
+    width: 17em;
+  }
+  .aside-card__bub {
+    top: 3.1em;
+  }
+}
 /* Restaurants */
 section {
   padding-left: 1.1em;
@@ -339,6 +379,53 @@ section {
 }
 .heart:hover .fas {
   opacity: 1;
+}
+
+@media all and (max-device-width: 991px) and (min-device-width: 760px) {
+  section {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+
+  .bloc_titre {
+    align-self: center;
+  }
+
+  .restau-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2em;
+  }
+  .restau-list a {
+    width: 47.5%;
+  }
+  .restau-list-card {
+    margin-bottom: 0;
+  }
+}
+@media all and (min-device-width: 991px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .restau {
+    width: 54em;
+  }
+  .restau-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2em;
+  }
+  .restau-list a {
+    width: 47.5%;
+  }
+  .restau-list-card {
+    margin-bottom: 0;
+  }
 }
 
 /*# sourceMappingURL=omf-accueil.css.map */
