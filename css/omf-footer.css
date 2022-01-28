@@ -19,32 +19,49 @@ footer {
   border: solid red #353535;
   margin: 0;
 }
-footer h1 {
+footer .foot h1 {
   font-size: 1.2em;
   font-weight: normal;
   padding-top: 1.4em;
   margin-top: 0;
   margin-bottom: 1.2em;
 }
-footer ul {
+footer .foot ul {
   margin: 0;
   padding: 0;
 }
-footer ul:last-child {
+footer .foot ul:last-child {
   padding-bottom: 1.6em;
 }
-footer ul li {
+footer .foot ul li {
   margin: 0;
   padding-bottom: 0.5em;
   list-style-type: none;
 }
-footer ul li a {
+footer .foot ul li a {
   color: white;
   text-decoration: none;
 }
-footer ul li a i {
+footer .foot ul li a i {
   font-size: 0.8em;
   width: 2em;
+}
+
+@media all and (max-device-width: 991px) and (min-device-width: 760px) {
+  footer {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+}
+@media all and (min-device-width: 991px) {
+  footer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .foot {
+    width: 53.5em;
+  }
 }
 
 /*# sourceMappingURL=omf-footer.css.map */
