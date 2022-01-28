@@ -262,9 +262,49 @@ $anim-delay: 80ms;
 	}
 }
 
-/* Animation - Plat*/
+@media all and (max-device-width: 991px) and (min-device-width: 760px) {
+	.menu__body {
+		padding-left: 3em;
+		padding-right: 3em;
+	}
 
+	.body_grp {
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		gap: 1em;
+		margin-bottom: 2em;
+	}
 
+	.card {
+		margin-bottom: 0;
+		width: 48.5%;
+	}
+}
+
+@media all and (min-device-width: 992px) {
+	.menu__body-int {
+		display: flex;
+		flex-direction: column;
+		margin-left: auto;
+		margin-right: auto;
+		width: 54em;
+	}
+
+	.body_grp {
+		display: flex;
+		justify-content: baseline;
+		flex-wrap: wrap;
+		margin-bottom: 3em;
+		gap: 3em;
+		row-gap: 1em; 
+	}
+
+	.card {
+		width: 25.5em;
+		margin-bottom: 0;
+	}
+}
 
 /* Bouton - Commander */
 .comm {
